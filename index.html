@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="index.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200&display=swap" rel="stylesheet">
+        <title>Main Page</title>
+    </head>
+    <body>
+        <div class="bg">
+            <div class="navbar">
+                <h3>Odd Jobs</h3>
+                <button type="button" class="sign" id="Sign">Sign in/Sign up</button>
+                <a href="No Working.html" class="Partner">Partner</a>
+            </div>
+            <div class="Content">
+                <img src="img/Odd Jobs Logo.png" class="logo">
+            </div>
+            <img src="img/arrow.png" class="arrow">
+            <a href="Services.html" class="next">Take a Look at Our Services</a>
+
+            <div class="Footer">
+                <div class="Accordion">
+                    <button type="button" class="accordion_button">About Us:</button>
+                    <div class="accordion_content">
+                        <p>
+                            We're a small organization that was created solely to help others, we accept any types of jobs excluding involvement with crime or acts of violence whether its online or in real life. Our dream is to be a successful organization that can help other people in a global scale, you can proceed to the next page by taking a look at our services. Your satisfaction is our highest priority. If you want to know more about us click <a href="AboutUs.html">Here</a>. Please Enjoy Our Services. 
+
+                        </p>
+                    </div>
+                </div>  
+            </div>
+            <div class="red">
+                <div class="lists">
+                    <ul>
+                        <li class="one"><a href="No Working.html">Faq</a></li>
+                        <li><a href="No Working.html">Help</a></li>
+                        <li><a href="No Working.html">Terms and Conditions</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="bg-modal">
+            <div class="modal-content">
+                <div class="close">+</div>
+                <h3>Sign In</h3>
+                <input type="text" placeholder="Username">
+                <input type="text" placeholder="Password">
+                <p id="signup">Dont have an account yet?</p>
+                <button type="button" id="submit">Submit</button>
+            </div>
+        </div>
+        <div class="bg-modal2">
+            <div class="modal-content2">
+                <div class="close2">+</div>
+                <h3>Sign Up</h3>
+                <input type="text" placeholder="Username">
+                <input type="text" placeholder="Password">
+                <p id="signin">Already have an account?</p>
+                <button type="button" id="submit">Submit</button>
+            </div>
+        </div>
+        <script>
+            document.querySelectorAll('.accordion_button').forEach(button=>{
+                button.addEventListener('click',()=>{
+                    const accordionContent=button.nextElementSibling;
+
+                    button.classList.toggle('accordion_button--active');
+
+                    if (button.classList.contains('accordion_button--active')) {
+                        accordionContent.style.maxHeight=accordionContent.scrollHeight+"px";
+                    }else{
+                        accordionContent.style.maxHeight=0;
+                    }
+
+                });
+            });
+
+            document.getElementById("Sign").addEventListener('click', function(){
+                document.querySelector(".bg-modal").style.display="flex";
+            });
+
+            document.querySelector(".close").addEventListener("click",function(){
+                document.querySelector(".bg-modal").style.display="none";
+            });
+
+            document.getElementById("signup").addEventListener('click', function(){
+                document.querySelector(".bg-modal").style.display="none";
+                document.querySelector(".bg-modal2").style.display="flex";
+            });
+
+            document.querySelector(".close2").addEventListener("click",function(){
+                document.querySelector(".bg-modal2").style.display="none";
+            });
+
+            document.getElementById("signin").addEventListener('click', function(){
+                document.querySelector(".bg-modal2").style.display="none";
+                document.querySelector(".bg-modal").style.display="flex";
+            });
+
+
+
+        </script>
+
+    </body>
+</html>
