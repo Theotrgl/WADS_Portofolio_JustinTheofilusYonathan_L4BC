@@ -30,6 +30,58 @@
     justify-content: space-between;
     background-color: rgb(0, 0, 0);
 }
+.navbar .desc{
+    color:white;
+    padding:2px 15px;
+    background:transparent;
+    outline:none;
+    cursor:pointer;
+    position:absolute;
+    right:200px;
+    top:25px;
+    border-radius:20px;
+    text-decoration: none;
+    transition: .5s;
+}
+.navbar .desc:hover{
+    color:black;
+    background-color:white;
+}
+
+.navbar .me {
+    color:white;
+    padding:2px 15px;
+    background:transparent;
+    outline:none;
+    cursor:pointer;
+    position:absolute;
+    right:400px;
+    top:25px;
+    border-radius:20px;
+    text-decoration: none;
+    transition: .5s;
+}
+.navbar .me:hover{
+    color:black;
+    background-color:white;
+}
+.navbar .members {
+    color:white;
+    padding:2px 15px;
+    background:transparent;
+    outline:none;
+    cursor:pointer;
+    position:absolute;
+    right:600px;
+    top:25px;
+    border-radius:20px;
+    text-decoration: none;
+    transition: .5s;
+}
+.navbar .members:hover{
+    color:black;
+    background-color:white;
+}
 .sign{
     color:white;
     padding:2px 15px;
@@ -44,12 +96,11 @@
     transition:.5s
 }
 
-.Content .logo{
-    width:400px;
-    position:absolute;
-    top:50%;
-    left:51%;
-    transform:translate(-50%,-50%);  
+.Content{
+    padding-left: 4%;
+}
+.Content .background{
+    width:max-content;
 }
 .arrow{
     width:40px;
