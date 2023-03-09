@@ -21,46 +21,22 @@
                 <img src="IMG/bg.jpg" class="background">
             </div>
             <img src="img/arrow.png" class="arrow">
-
+            <section id="section01" class="Members">
+                <h1>Group Members</h1>
+                <a href="#section02"><span></span>Scroll</a>
+              </section>
+              <section id="section02" class="Me">
+                <h1>About Me</h1>
+                <a href="#section03"><span></span>Scroll</a>
+              </section>
+              <section id="section03" class="Desc">
+                <h1>Final Project Description</h1>
+                <a href="#section04"><span></span>Scroll</a>
+              </section>
             <div class="Footer">
                 <div class="Accordion">
-                    <button type="button" class="accordion_button">About Us:</button>
-                    <div class="accordion_content">
-                        <p>
-                            We're a small organization that was created solely to help others, we accept any types of jobs excluding involvement with crime or acts of violence whether its online or in real life. Our dream is to be a successful organization that can help other people in a global scale, you can proceed to the next page by taking a look at our services. Your satisfaction is our highest priority. If you want to know more about us click <a href="AboutUs.html">Here</a>. Please Enjoy Our Services. 
-
-                        </p>
                     </div>
                 </div>  
-            </div>
-            <div class="red">
-                <div class="lists">
-                    <ul>
-                        <li class="one"><a href="No Working.html">Faq</a></li>
-                        <li><a href="No Working.html">Help</a></li>
-                        <li><a href="No Working.html">Terms and Conditions</a></li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-        <div class="bg-modal">
-            <div class="modal-content">
-                <div class="close">+</div>
-                <h3>Sign In</h3>
-                <input type="text" placeholder="Username">
-                <input type="text" placeholder="Password">
-                <p id="signup">Dont have an account yet?</p>
-                <button type="button" id="submit">Submit</button>
-            </div>
-        </div>
-        <div class="bg-modal2">
-            <div class="modal-content2">
-                <div class="close2">+</div>
-                <h3>Sign Up</h3>
-                <input type="text" placeholder="Username">
-                <input type="text" placeholder="Password">
-                <p id="signin">Already have an account?</p>
-                <button type="button" id="submit">Submit</button>
             </div>
         </div>
         <script>
@@ -75,34 +51,14 @@
                     }else{
                         accordionContent.style.maxHeight=0;
                     }
-
                 });
             });
-
-            document.getElementById("Sign").addEventListener('click', function(){
-                document.querySelector(".bg-modal").style.display="flex";
+                        $(function() {
+                $('a[href*=#]').on('click', function(e) {
+                e.preventDefault();
+                $('html, body').animate({ scrollTop: $($(this).attr('href')).offset().top}, 500, 'linear');
+                });
             });
-
-            document.querySelector(".close").addEventListener("click",function(){
-                document.querySelector(".bg-modal").style.display="none";
-            });
-
-            document.getElementById("signup").addEventListener('click', function(){
-                document.querySelector(".bg-modal").style.display="none";
-                document.querySelector(".bg-modal2").style.display="flex";
-            });
-
-            document.querySelector(".close2").addEventListener("click",function(){
-                document.querySelector(".bg-modal2").style.display="none";
-            });
-
-            document.getElementById("signin").addEventListener('click', function(){
-                document.querySelector(".bg-modal2").style.display="none";
-                document.querySelector(".bg-modal").style.display="flex";
-            });
-
-
-
         </script>
 
     </body>
